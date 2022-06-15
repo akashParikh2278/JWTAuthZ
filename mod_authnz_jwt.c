@@ -906,7 +906,7 @@ static int auth_jwt_login_handler(request_rec *r){
 static int create_token(request_rec *r, char** token_str, const char* username){
 	
 	ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55300)
-							"auth_jwt: creating token...");
+							"auth_jwt: creating tokens 2278...");
 
 	jwt_t *token;
 	int allocate = token_new(&token);
