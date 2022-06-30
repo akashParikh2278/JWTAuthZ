@@ -1121,6 +1121,11 @@ static int auth_jwt_authn_with_token(request_rec *r){
 								"auth_jwt authn: reading Authorization header...");
 		char* authorization_header = (char*)apr_table_get( r->headers_in, "Authorization");
 
+		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55405)
+                            "auth_jwt authn: user found in token is %s", maybe_user);
+        setenv("NEW_USER", maybe_user, 1);  
+
+
 		if(authorization_header) {
 			if(strlen(authorization_header) > 7 && !strncmp(authorization_header, "Bearer ", 7)){
 				token_str = authorization_header+7;
