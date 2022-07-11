@@ -712,7 +712,7 @@ static const char *jwt_parse_config(cmd_parms *cmd, const char *require_line, co
 
 static authz_status jwtclaim_check_authorization(request_rec *r, const char* require_args, const void *parsed_require_args){
 	ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55100)
-					"auth_jwt require jwt-claim: checking authorization...");
+					"auth_jwt require jwt-claim: checking authorization AGAIN!!...");
 	if(!r->user){
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55101)
 					"auth_jwt authorize: no user found...");
@@ -753,7 +753,7 @@ static authz_status jwtclaim_check_authorization(request_rec *r, const char* req
 
 static authz_status jwtclaimarray_check_authorization(request_rec *r, const char* require_args, const void *parsed_require_args){
 	ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55107)
-					"auth_jwt require jwt-claim-array: checking authorization...");
+					"auth_jwt require jwt-claim-array: checking authorization AGAIN...");
 	if(!r->user){
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55108)
 					"auth_jwt authorize: no user found...");
