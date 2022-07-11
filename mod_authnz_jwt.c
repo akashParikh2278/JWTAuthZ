@@ -1060,7 +1060,7 @@ static int check_authn(request_rec *r, const char *username, const char *passwor
 		return return_code;
 	}
 	ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55230)
-							"auth_jwt authn: credentials are correct");
+							"auth_jwt authn: credentials are correct CONFIRMED ---> !! ");
 	return OK;
 }
 
