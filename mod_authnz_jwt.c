@@ -715,7 +715,7 @@ static authz_status jwtclaim_check_authorization(request_rec *r, const char* req
 					"auth_jwt require jwt-claim: checking authorization AGAIN!!...");
 	if(!r->user){
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55101)
-					"auth_jwt authorize: no user found...");
+					"auth_jwt authorize: no user found... Checking");
 		return AUTHZ_DENIED_NO_USER;
 	}
 	const char* err = NULL;
