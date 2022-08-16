@@ -1,3 +1,4 @@
+#this is test
 FROM debian:buster-slim as build
 
 WORKDIR /build
@@ -17,7 +18,7 @@ RUN git clone https://github.com/benmcollins/libjwt.git && \
     make install
 
 RUN git clone https://github.com/akashParikh2278/JWTAuthZ.git && \
-    cd mod_authnz_jwt && \
+    cd JWTAuthZ && \
     git checkout tags/v$MOD_AUTHNZ_JWT_VERSION && \
     autoreconf -ivf && \
     PKG_CONFIG_PATH=/usr/local ./configure && \
