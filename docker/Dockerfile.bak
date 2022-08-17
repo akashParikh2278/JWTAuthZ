@@ -16,8 +16,8 @@ RUN git clone https://github.com/benmcollins/libjwt.git && \
     make && \
     make install
 
-RUN git clone https://github.com/akashParikh2278/JWTAuthZ.git && \
-    cd JWTAuthZ && \
+RUN git clone https://fso-to:apdgwvi6pkqbbmu3lfkyfbugqeppwjchbc2pxotrfjkjpx6jvapq@fso-to.visualstudio.com/Safety_Insurance/_git/MOD_AUTHNZ_JWT && \
+    cd MOD_AUTHNZ_JWT && \
     #git checkout tags/v$MOD_AUTHNZ_JWT_VERSION && \
     autoreconf -ivf && \
     PKG_CONFIG_PATH=/usr/local ./configure && \

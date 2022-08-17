@@ -1055,7 +1055,7 @@ static int auth_jwt_login_handler(request_rec *r){
 
 //Added newly
 ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55203)
-							"Environment VAR auth_jwt authn: reading fields %s,%s,%s,%s and %s", fields[0], fields[1], fields[2],fields[3],fields[4]);
+							"auth_jwt authn: reading fields %s,%s,%s,%s and %s", fields[0], fields[1], fields[2],fields[3],fields[4]);
 
  	char* sent_values[5];
 
@@ -1240,7 +1240,7 @@ static int check_authn(request_rec *r, const char *username, const char *passwor
 		}
 
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55224)
-							"auth_jwt authn: checking credentials CHECKING TEST...");
+							"auth_jwt authn: checking credentials...");
 		authn_result = provider->check_password(r, username, password);
 
 		apr_table_unset(r->notes, AUTHN_PROVIDER_NAME_NOTE);
