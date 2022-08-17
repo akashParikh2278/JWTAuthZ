@@ -1240,7 +1240,7 @@ static int check_authn(request_rec *r, const char *username, const char *passwor
 		}
 
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55224)
-							"auth_jwt authn: checking credentials...");
+							"auth_jwt authn: checking credentials CHECKING TEST...");
 		authn_result = provider->check_password(r, username, password);
 
 		apr_table_unset(r->notes, AUTHN_PROVIDER_NAME_NOTE);
