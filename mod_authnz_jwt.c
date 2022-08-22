@@ -1350,7 +1350,7 @@ static int auth_jwt_authn_with_token(request_rec *r){
 		return DECLINED;
 	}
 
-	if(delivery_type & 2) {
+	/*if(delivery_type & 2) {
 		ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(55402)
 								"auth_jwt authn: reading Authorization header...");
 		char* authorization_header = (char*)apr_table_get( r->headers_in, "Authorization");
@@ -1367,7 +1367,7 @@ static int auth_jwt_authn_with_token(request_rec *r){
 			logCode = APLOGNO(55404);
 			logStr = "auth_jwt authn: missing Authorization header, responding with WWW-Authenticate header...";
 		}
-	}
+	}*/
 
 	if((delivery_type & 4) && !token_str){
 		int cookie_remove = get_config_int_value(r, dir_cookie_remove);
